@@ -15,8 +15,6 @@ for numero in cpf:
     except:
         ...
 
-multi = soma * 10
+digito = soma * 10 % 11
 
-resto = multi % 11
-
-print(resto)
+print(digito)
