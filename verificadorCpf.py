@@ -1,6 +1,6 @@
 # cpf 469.743.048-46
 
-cpf = "469.743.048-46"
+cpf = input("Digite o seu cpf, inclua pontos e traço: ")
 cpfNumero = ""
 soma = 0
 i = 10
