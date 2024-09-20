@@ -1,9 +1,9 @@
 # cpf 469.743.048-46
 
-cpf = "469.743.048-46"
+cpf = input("Digite um CPF: ")
 
 #declarando variáveis
-
+cpf_dois_ultimos_digitos = cpf[-2:]
 cpf = cpf[:-2]
 cpfNumero = ""
 soma1 = 0
@@ -31,13 +31,20 @@ digito1 = digito1 if digito1 <=9 else 0
 
 #descobrindo o segundo digito
 
-cpfNumero = int(cpfNumero) + digito1
+cpf_verificacao1 = int(cpfNumero) + digito1
 
-for numero in str(cpfNumero):
+for numero in str(cpf_verificacao1):
     soma2 += int(numero) * contador2
     contador2 -= 1
 
 digito2 = soma2 * 10 % 11
 digito2 = digito2 if digito2 <=9 else 0
 
-print(digito2)
+#verificação do cpf inteiro
+
+cpf_verificado = cpfNumero + str(digito1) + str(digito2)
+
+if (cpfNumero+cpf_dois_ultimos_digitos) == cpf_verificado:
+    print("CPF válido")
+else:
+    print("CPF inválido")
