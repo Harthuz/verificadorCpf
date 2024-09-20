@@ -17,4 +17,6 @@ for numero in cpf:
 
 digito = soma * 10 % 11
 
+digito = digito if digito <=9 else 0
+
 print(digito)
